@@ -1,0 +1,1 @@
+from . import base_bp, college_bp, course_bp, student_bp
