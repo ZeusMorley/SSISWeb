@@ -10,14 +10,13 @@ def create_app():
 
     app.config.from_object(Config)
 
-    # Initialize Cloudinary configuration
     cloudinary.config(
         cloud_name=app.config['CLOUD_NAME'],
         api_key=app.config['CLOUD_API_KEY'],
-        api_secret=app.config['CLOUD_API_SECRET']
+        api_secret=app.config['CLOUD_API_SECRET'],
+        folder_name=app.config['CLOUD_FOLDER']
     )
 
-    # Import and register blueprints
     from .routes.base_bp import base_bp
     # from .routes.college_bp import college
     # from .routes.course_bp import course

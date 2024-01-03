@@ -11,7 +11,7 @@
 .NAVBAR {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .nav-list {
@@ -25,11 +25,10 @@
 	padding: 0px 20px;
 }
 
-.NAVBAR li a {
+.nav-item {
 	transition: all 0.3s ease 0s;
     color: #ffffff;
     text-decoration: none;
-    padding-top: -10px;
 }
 
 .NAVBAR li a:hover {
