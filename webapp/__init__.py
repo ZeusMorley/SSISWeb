@@ -1,7 +1,10 @@
 from flask import Flask
+from flask_mysql_connector import MySQL
+from .db import create_tables, mysql
 from webapp.config import Config
 from dotenv import load_dotenv
 import cloudinary
+from cloudinary import config as cloudinary_config
 
 def create_app():
     app = Flask(__name__)
@@ -17,6 +20,8 @@ def create_app():
         folder_name=app.config['CLOUD_FOLDER']
     )
 
+    create_tables(app=app, mysql=mysql)
+    
     from .routes.base_bp import base_bp
     # from .routes.college_bp import college
     # from .routes.course_bp import course
