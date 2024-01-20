@@ -3,19 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
+        {% include 'components/style.html'%}
+        {% include 'components/script.html'%}
         <title>SSIS</title>
     </head>
 
 <body>
     <div class="header">
-        {% include 'navigationbar.html'%}
+        {% include 'components/homenav.html'%}
     </div>
         
 
-    <div class="content">
-        <h1>Hatdog</h1>
-        <p>with Bun</p>
+    <div class="homechoice">
+        {% include 'components/homechoice.html'%}
     </div>
 
 </body>

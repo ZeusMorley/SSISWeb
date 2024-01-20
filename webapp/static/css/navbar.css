@@ -1,0 +1,26 @@
+.NAVBAR {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.NAVBAR li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.nav-item {
+	transition: all 0.3s ease 0s;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.NAVBAR li a:hover {
+	color: #34f744;
+}
